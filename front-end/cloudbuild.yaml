@@ -1,7 +1,5 @@
 steps:
-#  - name: maven:3-jdk-8
-#    entrypoint: mvn
-#    args: ["test"]
   - name: maven:3-jdk-8
     entrypoint: mvn
-    args: ["-f front-end/pom.xml", "package","-Dmaven.test.skip=true","appengine:deploy"]
+    args: ["-f","front-end/pom.xml", "package","-Dmaven.test.skip=true","appengine:deploy"]
+timeout: 3600s
